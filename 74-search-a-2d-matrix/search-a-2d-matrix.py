@@ -1,33 +1,25 @@
 class Solution:
-    def searchMatrix(self, s: List[List[int]], t: int) -> bool:
+    def searchMatrix(self, ma: List[List[int]], t: int) -> bool:
         l=0
-        m=len(s)
-        n=len(s[0])
-        h=m-1
-        while(l<=h):
-            mid=(l+h)//2
-            if s[mid][0]<=t<=s[mid][n-1]:
-                p=s[mid]
-                la=0
-                hi=n-1
-                while(la<=hi):
-                    mi=(la+hi)//2
-                    if p[mi]<t:
-                        la=mi+1
-                    elif p[mi]>t:
-                        hi=mi-1
-                    else:
-                        return True
-                return False
-            elif s[mid][0]>t:
-                h=mid-1
+        m=len(ma)
+        n=len(ma[0])
+        h=m*n-1
+        if m*n==1:
+            if ma[0][0]==t:
+                return True
             else:
-                l=mid+1
-        return False
-                    
-
-
-        
+                return False
+        else:
+            while(l<=h):
+                mid=(l+h)//2
+                a=ma[mid//n][mid%n]
+                if a>t:
+                    h=mid-1
+                elif a<t:
+                    l=mid+1
+                else:
+                    return True
+            return False
             
 
         
