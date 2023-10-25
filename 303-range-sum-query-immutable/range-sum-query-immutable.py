@@ -4,19 +4,16 @@ class NumArray:
     def __init__(self, n: List[int]):
         a=[]
         b=0
-        print(len(n))
         for i in range (len(n)):
             b+=n[i]
             a.append(b)
-        self.a=a
-        print(a)   
+        self.a=a   
 
     def sumRange(self, l: int, r: int) -> int:
         if l>0:
-            c=self.a[r]-self.a[l-1]
+            return(self.a[r]-self.a[l-1])
         elif l==0:
-            c=self.a[r]
-        return c
+            return(self.a[r])
 
 # Your NumArray object will be instantiated and called as such:
 # obj = NumArray(nums)
