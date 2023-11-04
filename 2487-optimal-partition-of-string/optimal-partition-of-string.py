@@ -1,13 +1,10 @@
 class Solution:
     def partitionString(self, s: str) -> int:
-        i=0
-        c=0
-        a=[]
-        while(i<len(s)):
-            if s[i] in a:
-                a=[]
-                c+=1
+        sub_set, ans = set(), 1
+        for c in s:
+            if c in sub_set:
+                ans += 1
+                sub_set = {c}
             else:
-                a.append(s[i])
-                i+=1
-        return c+1
+                sub_set.add(c)
+        return ans
