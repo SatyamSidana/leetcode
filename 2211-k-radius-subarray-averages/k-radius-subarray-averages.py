@@ -1,17 +1,15 @@
 class Solution:
-    def getAverages(self, nums: List[int], k: int) -> List[int]:
-        res, left, windowSum, windowLength = [-1] * len(nums), 0, 0, 2 * k + 1
+    def getAverages(self, n: List[int], k: int) -> List[int]:
+        a=[-1]*len(n)
+        b=0
+        if len(n)>2*k:
+            for i in range (2*k+1):
+                b+=n[i]
+            for i in range (len(n)-2*k-1):
+                a[k+i]=b//(2*k+1)
+                b=b-n[i]+n[2*k+1+i]
+            a[len(n)-k-1]=b//(2*k+1)
+            return a
+        else:
+            return a
         
-        for right in range(len(nums)):
-            windowSum += nums[right]  # Add the current element to the window sum
-            
-            # Check if the window length is reached
-            if right - left + 1 == windowLength:
-                # Calculate the average of the window and store it in the result array
-                res[left + k] = windowSum // windowLength
-                
-                # Adjust the window sum and move the left pointer
-                windowSum -= nums[left]
-                left += 1
-        
-        return res
