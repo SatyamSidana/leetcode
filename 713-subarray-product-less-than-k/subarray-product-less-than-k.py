@@ -4,8 +4,6 @@ class Solution:
         e=0
         w=1
         c=0
-        if k==0:
-            return 0
         while(e<len(n)):
             w*=n[e]
             a=w
