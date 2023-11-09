@@ -9,12 +9,10 @@ class Solution:
                 if a[i]!=b[p[i]]:
                     return False
             else:
-                print(b)
                 for j in range (len(b)):
                     if a[i]==b[p[j]]:
                         return False
                 b[p[i]]=a[i]
-        print(b)
         return True
 
         
