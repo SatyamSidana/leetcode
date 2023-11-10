@@ -6,10 +6,8 @@ class Solution:
                 if s[i]!=b[t[i]]:
                     return False
             else:
-                print(b)
                 for j in range (len(b)):
                     if s[i]==b[t[j]]:
                         return False
-                b[t[i]]=s[i]
-        print(b)    
+                b[t[i]]=s[i]    
         return True
