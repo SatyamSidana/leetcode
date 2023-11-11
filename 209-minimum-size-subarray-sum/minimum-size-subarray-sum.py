@@ -3,7 +3,7 @@ class Solution:
         s=0
         e=0
         w=0
-        minl=len(n)+1
+        minl=10**5+1
         while(e<len(n)):
             w+=n[e]
             e+=1
@@ -11,7 +11,7 @@ class Solution:
                 minl=min(minl,e-s)
                 w-=n[s]
                 s+=1
-        if minl==len(n)+1:
+        if minl==10**5+1:
             return 0
         return minl
             
