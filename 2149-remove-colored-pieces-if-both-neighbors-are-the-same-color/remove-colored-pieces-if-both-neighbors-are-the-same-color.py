@@ -1,25 +1,10 @@
 class Solution:
-    def winnerOfGame(self, c: str) -> bool:
-        e=0
-        s=0
-        n=0
-        if len(c)==1 or len(c)==2:
-            return False
-        while e<len(c):
-            while c[e]==c[s] and e<len(c):
-                e+=1
-                if e==len(c):
-                    break
-            if e-s>=3 :
-                if c[s]=="A":
-                    n+=e-s-2
-                else:
-                    n-=e-s-2
-            print(n)
-            s=e            
-        if n>0:
-            return True
-        return False    
+    def winnerOfGame(self, colors: str) -> bool:
+        alice_plays = sum(len(match.group()) - 2 for match in re.finditer(r'A{3,}', colors))
+        
+        bob_plays = sum(len(match.group()) - 2 for match in re.finditer(r'B{3,}', colors))
+        
+        return alice_plays > bob_plays 
 
 
         
