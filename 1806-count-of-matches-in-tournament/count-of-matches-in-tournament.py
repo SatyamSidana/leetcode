@@ -5,7 +5,7 @@ class Solution:
             if n%2==0:
                 c+=(n//2)
                 n=(n//2)
-            if n%2==1:
+            else:
                 c+=(n-1)//2
                 n=((n-1)//2)+1
         return c
