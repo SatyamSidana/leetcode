@@ -11,9 +11,10 @@ class Solution:
                 x+=1
             elif i=="W":
                 x-=1
-            if (x,y) in a: 
-                return True
+            b=len(a)
             a.add((x,y))
+            if len(a)==b:
+                return True
         return False   
 
         
