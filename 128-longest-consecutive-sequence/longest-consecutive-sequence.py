@@ -22,7 +22,6 @@ class Solution:
                     if a.get(i-j):
                         c+=1
                         a[i-j]=0
-                        print(i-j)
                         j+=1
                     else:
                         b=False
