@@ -9,10 +9,11 @@ class Solution:
                 while i<len(c):
                     if c[i]==d:
                         b.append(t[i])
+                        m+=t[i]
                         i+=1
                     else:
                         break
-                m+=sum(b)-max(b)
+                m-=max(b)
             else:
                 i+=1
         return m            
