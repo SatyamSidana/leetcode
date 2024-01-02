@@ -6,7 +6,6 @@ class Solution:
                 a.insert(i+1,0)
                 a.pop()
                 i+=1
-            
             i+=1
         
         
