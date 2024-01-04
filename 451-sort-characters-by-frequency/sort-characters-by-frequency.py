@@ -11,8 +11,7 @@ class Solution:
         d=sorted(a.items(), key = lambda x : x[1] , reverse=True)
         
         for (i,j) in d:
-            for k in range (j):
-                b+=i
+                b+=i*j
 
   
         return b
