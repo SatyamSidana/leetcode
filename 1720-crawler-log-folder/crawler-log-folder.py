@@ -1,10 +1,10 @@
 class Solution:
     def minOperations(self, l: List[str]) -> int:
-        a=[]
+        a=0
         for i in l:
-            if i=="../" and len(a)>0:
-                a.pop()
+            if i=="../" and a>0:
+                a-=1
             elif i!="./" and i!="../":
-                a.append(i)
-        return len(a)
+                a+=1
+        return a
         
