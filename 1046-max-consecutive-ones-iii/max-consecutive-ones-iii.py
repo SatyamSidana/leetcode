@@ -21,6 +21,5 @@ class Solution:
             m=max(e-s,m)
             print(s,e)
         print(z)
-        if k==0 and len(z)==len(n):
-            return 0
+        
         return m
