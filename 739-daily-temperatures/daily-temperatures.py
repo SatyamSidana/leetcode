@@ -19,11 +19,8 @@ class Solution:
             else:
                 m[s[i][0]]={}
                 m[s[i][0]][s[i][1]]=0
-                
-        print(m)
         for i in range (len(t)):
             a.append(m[t[i]][i])
-        print(m)
         return a
 
                 
