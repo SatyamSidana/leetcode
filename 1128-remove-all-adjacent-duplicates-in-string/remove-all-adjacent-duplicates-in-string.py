@@ -13,9 +13,6 @@ class Solution:
             if i <len(s):
                 a.append(s[i])
             i+=1
-            
-        for i in a:
-            b+=i
-        return b
+        return b.join(a)
             
         
