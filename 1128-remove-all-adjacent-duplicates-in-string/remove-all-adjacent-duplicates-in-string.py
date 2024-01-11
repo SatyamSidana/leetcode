@@ -1,14 +1,21 @@
 class Solution:
     def removeDuplicates(self, s: str) -> str:
-        i=0
-        while i<len(s)-1:
-            if s[i]==s[i+1]:
-                s=s[:i]+s[i+2:]
-                if i>0:
-                    i-=1
-            else:
+        a=[]
+        b=""
+        a.append(s[0])
+        i=1
+        while i<len(s):
+            while a and s[i]==a[-1]:
+                a.pop()
                 i+=1
+                if i >=len(s):
+                    break
+            if i <len(s):
+                a.append(s[i])
+            i+=1
             
-        return s
+        for i in a:
+            b+=i
+        return b
             
         
