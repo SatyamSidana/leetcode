@@ -17,5 +17,5 @@ class Solution:
             if t :
                 a.append(-1)
         return a
-
+        
         
