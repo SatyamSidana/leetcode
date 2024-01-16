@@ -3,7 +3,7 @@ class Solution:
         a={}
         m=0
         for i in s:
-            if i in a:
+            if a.get(i):
                 a[i]+=1
             else:
                 a[i]=1
@@ -11,7 +11,8 @@ class Solution:
             if a.get(i) and a[i]>0:
                 a[i]-=1
         for i in a:
-            m+=a[i]
+            if a[i]>0:
+                m+=a[i]
         return m
             
         
