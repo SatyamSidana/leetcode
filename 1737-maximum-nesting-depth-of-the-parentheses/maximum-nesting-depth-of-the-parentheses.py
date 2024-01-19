@@ -12,6 +12,7 @@ class Solution:
                 a.append(s[i])
                 m=max(m,c)
             if c==0:
+                print(a)
                 a=[]
         return m
 
