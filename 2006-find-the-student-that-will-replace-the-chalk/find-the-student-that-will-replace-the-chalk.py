@@ -1,7 +1,6 @@
 class Solution:
     def chalkReplacer(self, c: List[int], k: int) -> int:
         m=k%sum(c)
-        print(m)
         i=0
         while m>0 and i<len(c):
             m-=c[i]
