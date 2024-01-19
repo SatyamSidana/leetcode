@@ -13,8 +13,8 @@ class Solution:
             if c==0:
                 a.pop()
                 a.pop(0)
-                b="".join(a)
-                m+=b
+                m+="".join(a)
+                
                 a=[]
         return m
 
