@@ -1,6 +1,5 @@
 class Solution:
     def countStudents(self, s: List[int], f: List[int]) -> int:
-        j=len(s)
         c=0
         while len(f)>0:
             if s[0]==f[0]:
