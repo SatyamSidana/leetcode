@@ -5,7 +5,6 @@ class Solution:
         for i in range (len(n)//2):
             if a.get(n[i]):
                 c+=1
-        print(c)
         for i in range (len(n)//2,len(n)):
             if a.get(n[i]):
                 c-=1
