@@ -6,9 +6,7 @@ class Solution:
         for i in s:
             if i=="(":
                 m+=1
-                if m-1<len(st):
-                    pass
-                else:
+                if m-1>=len(st):
                     st.append(0)
             elif i==")" and st:
                 if m<len(st):
