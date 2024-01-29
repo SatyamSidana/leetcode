@@ -1,9 +1,9 @@
 class Solution:
     def findDuplicate(self, n: List[int]) -> int:
-        a=[0]*len(n)
-        for i in range (len(n)):
-            if a[n[i]-1]!=0:
-                return n[i]
+        a={}
+        for i in n:
+            if i in a:
+                return i
             else:
-                a[n[i]-1]=n[i]
+                a[i]=0
                
