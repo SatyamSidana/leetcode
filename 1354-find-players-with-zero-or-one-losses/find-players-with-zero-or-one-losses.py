@@ -16,7 +16,6 @@ class Solution:
         for i in a:
             if a[i]==0:
                 c[1].append(i)
-        print(a,b)
         c[1].sort()
         c[0].sort()
         return c
