@@ -8,7 +8,10 @@ class Solution:
         cur=head
         while cur :
             if cur==head and cur.val==v:
-                head=head.next
+                d=head
+                while d and d.val==v:
+                    d=d.next
+                head=d
                 cur=head
             else:
                 d=cur.next
