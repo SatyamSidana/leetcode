@@ -8,10 +8,10 @@ class Solution:
         d=None
         cur=head
         while cur:
-            t=ListNode(cur.val)
-            t.next=d
-            d=t
-            cur=cur.next
+            t=cur.next
+            cur.next=d
+            d=cur
+            cur=t
         return d
 
         
