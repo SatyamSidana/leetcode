@@ -9,7 +9,7 @@ class Solution:
         a={}
         cur=head
         while cur:
-            if a.get(cur):
+            if cur in a:
                 return True
             else:
                 a[cur]=1
