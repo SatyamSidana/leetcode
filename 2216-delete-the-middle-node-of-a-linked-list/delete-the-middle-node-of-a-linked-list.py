@@ -22,6 +22,5 @@ class Solution:
             cur=cur.next
             m+=1
         cur.next=cur.next.next
-        print(c)
         return head
         
