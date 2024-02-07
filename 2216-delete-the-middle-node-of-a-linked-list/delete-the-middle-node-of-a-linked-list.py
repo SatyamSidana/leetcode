@@ -12,15 +12,21 @@ class Solution:
         if not head.next.next:
             cur.next=None
             return head
-        while cur:
-            c+=1
-            cur=cur.next
-        c=c//2
+        pt=head
+        pt=pt.next
+        cur=cur.next.next
+        d=head
+        while cur and cur.next:
+            d=d.next
+            pt=pt.next
+            cur=cur.next.next
+        d.next=d.next.next
+        '''c=c//2
         m=0
         cur=head
         while m<c-1:
             cur=cur.next
             m+=1
-        cur.next=cur.next.next
+        cur.next=cur.next.next'''
         return head
         
