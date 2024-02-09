@@ -9,21 +9,17 @@ class Solution:
         d.next=head
         cur=d
         a=[]
-        c=1
         if not head or l==r:
             return head
         for _ in range(l - 1):
             cur=cur.next
         ptr=cur.next
-        c=l
         for _ in range(r - l + 1):
             a.append(ptr)
             ptr=ptr.next
-            c+=1
         print(a)
         while a:
             n=a.pop()
-            print(n.val)
             cur.next=n
             cur=cur.next
         cur.next=ptr
