@@ -17,7 +17,6 @@ class Solution:
         for _ in range(r - l + 1):
             a.append(ptr)
             ptr=ptr.next
-        print(a)
         while a:
             n=a.pop()
             cur.next=n
