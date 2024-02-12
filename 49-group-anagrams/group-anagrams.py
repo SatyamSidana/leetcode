@@ -1,7 +1,5 @@
 class Solution:
     def groupAnagrams(self, s: List[str]) -> List[List[str]]:
-        s.sort
-        print(s)
         a={}
         for i in s:
             c=sorted(list(i))
