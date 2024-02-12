@@ -48,7 +48,6 @@ class Solution:
                     else:
                         a.append(b.right.val)
                 m-=1
-                print(a)
             c+=1
         return True
 
