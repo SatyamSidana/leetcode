@@ -14,34 +14,22 @@ class Solution:
         q.append(cur)
         c=0
         while q:
+            s=len(q)
+            d=[]
+            while s:
+                b=q.pop(0)
+                d.append(b.val)
+                if b.left!=None:
+                    q.append(b.left)
+                if b.right!=None:
+                    q.append(b.right)
+                s-=1
             if c==0:
-                s=len(q)
-                d=[]
-                while s:
-                    b=q.pop(0)
-                    d.append(b.val)
-                    if b.left!=None:
-                        q.append(b.left)
-                    if b.right!=None:
-                        q.append(b.right)
-                    s-=1
-                a.append(d)                    
-                c=1
-            elif c==1:
-                s=len(q)
-                d=[]
-                while s:
-                    b=q.pop(0)
-                    d.append(b.val)
-                    print(a)
-                    if b.left!=None:
-                        q.append(b.left)
-                    if b.right!=None:
-                        q.append(b.right)
-                    s-=1
-                a.append(d[::-1])                    
+                a.append(d)  
+                c=1                  
+            else:
+                a.append(d[::-1])
                 c=0
-                
         return a
 
         
