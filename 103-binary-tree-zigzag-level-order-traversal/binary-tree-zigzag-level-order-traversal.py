@@ -20,7 +20,6 @@ class Solution:
                 while s:
                     b=q.pop(0)
                     d.append(b.val)
-                    print(a)
                     if b.left!=None:
                         q.append(b.left)
                     if b.right!=None:
