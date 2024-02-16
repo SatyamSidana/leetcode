@@ -24,7 +24,6 @@ class Solution:
             if b.right!=None:
                 q.append(b.right)
         s=0
-        print(a)
         while a:
             b=a.pop(0)
             m=2**s
