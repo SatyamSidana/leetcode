@@ -23,7 +23,6 @@ class Solution:
                 q.append((b[0].left,b[1]+1))
             if b[0].right!=None:
                 q.append((b[0].right,b[1]+1))
-        print(a)
         b=[]
         for i in a:
             b.append(i[-1])
