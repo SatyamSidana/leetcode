@@ -15,18 +15,16 @@ class Solution:
         while q:
             b=q.pop(0)
             if len(a)>b[1]:
-                a[b[1]].append(b[0].val)
+                a[b[1]]=b[0].val
             else:
-                a.append([])
-                a[b[1]].append(b[0].val)
+                a.append(0)
+                a[b[1]]=b[0].val
             if b[0].left!=None:
                 q.append((b[0].left,b[1]+1))
             if b[0].right!=None:
                 q.append((b[0].right,b[1]+1))
-        b=[]
-        for i in a:
-            b.append(i[-1])
-        return b
+        
+        return a
             
             
 
