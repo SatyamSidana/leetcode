@@ -13,10 +13,15 @@ class Solution:
     def isSubPath(self, head: Optional[ListNode], root: Optional[TreeNode]) -> bool:
         a=[]
         b=[]
+        c=0
+        r=head
+        while r:
+            c+=1
+            r=r.next
         def check(a,pt):
             i=0
             ptr=pt
-            while i <len(a):
+            while i <len(a)-c+1:
                 if a[i]==ptr.val:
                     j=i
                     i+=1
