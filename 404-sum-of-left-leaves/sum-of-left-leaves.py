@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
-        a=[]
+        c=0
         q=[]
         if not root:
             return None
@@ -17,8 +17,8 @@ class Solution:
             if b.left!=None:
                 q.append(b.left)
                 if b.left.left==None and b.left.right==None:
-                    a.append(b.left.val)
+                    c+=b.left.val
             if b.right!=None:
                 q.append(b.right)
-        return sum(a)
+        return c
         
