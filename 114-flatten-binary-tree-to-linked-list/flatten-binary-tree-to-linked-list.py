@@ -20,7 +20,6 @@ class Solution:
         b.pop(0)
         for i in range (len(b)):
             c=b.pop(0)
-            print(c)
             ptr.right=c
             ptr.left=None
             ptr=ptr.right
