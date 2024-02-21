@@ -13,5 +13,5 @@ class Solution:
                 preorder(cur.left)
                 preorder(cur.right)
         preorder(root)
-        return list(a)
+        return a
         
