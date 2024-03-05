@@ -4,7 +4,5 @@ class Solution:
         for i in s:
             if i=="1":
                 c+=1
-        a="1"
-        b="0"
-        return a*(c-1)+b*(len(s)-c)+a
+        return "1"*(c-1)+"0"*(len(s)-c)+"1"
         
