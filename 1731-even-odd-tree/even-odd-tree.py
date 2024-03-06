@@ -16,17 +16,16 @@ class Solution:
                 return False
             if len(s)>b[1]:
                 if b[1]%2==0:
-                    if b[0].val<=s[b[1]][-1]:
+                    if b[0].val<=s[b[1]][0]:
                         return False
                     s[b[1]][0]=b[0].val
                 if b[1]%2==1:
-                    if b[0].val>=s[b[1]][-1]:
+                    if b[0].val>=s[b[1]][0]:
                         return False
                     s[b[1]][0]=b[0].val
             else:
                 s.append([])
                 s[b[1]].append(b[0].val)
-            
             if b[0].left:
                 a.append((b[0].left,b[1]+1))
             if b[0].right:
