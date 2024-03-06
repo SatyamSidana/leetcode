@@ -18,11 +18,11 @@ class Solution:
                 if b[1]%2==0:
                     if b[0].val<=s[b[1]][-1]:
                         return False
-                    s[b[1]].append(b[0].val)
+                    s[b[1]][0]=b[0].val
                 if b[1]%2==1:
                     if b[0].val>=s[b[1]][-1]:
                         return False
-                    s[b[1]].append(b[0].val)
+                    s[b[1]][0]=b[0].val
             else:
                 s.append([])
                 s[b[1]].append(b[0].val)
