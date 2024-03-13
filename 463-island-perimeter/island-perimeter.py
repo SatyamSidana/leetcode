@@ -96,17 +96,13 @@ class Solution:
                         else:
                             if g[i-1][j]==1:
                                 c-=1
-                                print(c)
                             if g[i][j-1]==1:
                                 c-=1
-                                print(c)
                             if g[i][j+1]==1:
                                 c-=1
-                                print(c)
                             if g[i+1][j]==1:
                                 c-=1
                     p+=c
-                    #print(i,j,c)
         return p    
 
 
