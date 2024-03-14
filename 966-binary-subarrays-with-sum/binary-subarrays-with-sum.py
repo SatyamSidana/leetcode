@@ -5,7 +5,6 @@ class Solution:
         c=0
         for i in range (len(n)-1):
             p.append(p[i]+n[i+1])
-        print(p)
         a={}
         a[0]=1
         for i in p:
