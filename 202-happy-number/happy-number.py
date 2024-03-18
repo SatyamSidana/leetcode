@@ -6,7 +6,7 @@ class Solution:
                 c+=(a%10)**2
                 a=a//10
             return c
-        i=1000
+        i=100
         while i>0:
             if sum(n)==1:
                 return True
