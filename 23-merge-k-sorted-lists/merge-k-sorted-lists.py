@@ -8,7 +8,6 @@ class Solution:
         a=[]
         for i in lists:
             ptr=i
-            print(ptr)
             while ptr:
                 a.append(ptr.val)
                 ptr=ptr.next
