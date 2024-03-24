@@ -8,8 +8,6 @@ class Solution:
         for i in range (len(s)+1):
             a.append(i)
         i=0
-        c=0
-        t=False
         while i<len(s):
             if s[i]=="I":
                 i+=1
