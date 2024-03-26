@@ -7,9 +7,7 @@ class Solution:
                 pass
             else:
                 a[nums[i]]=1
-        print(a)
         for i in range (1,len(a)):
-            print(i)
             if a[i]==0:
                 b=i
                 break
