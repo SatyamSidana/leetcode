@@ -18,7 +18,6 @@ class Solution:
                 else:
                     b=h[i]
                     for j in range (g):
-                        print(b)
                         if a.get(b) and len(a[b])!=0:
                             c=a[b].pop(0)
                             h[c]=-1
