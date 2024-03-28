@@ -12,6 +12,6 @@ class Solution:
             while a[n[e]]>k:
                 a[n[s]]-=1
                 s+=1
-            m=max(m,e-s+1)
             e+=1
+            m=max(m,e-s)        
         return m        
