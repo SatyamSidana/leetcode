@@ -25,8 +25,7 @@ class Solution:
                             g[b[0]][b[1]+1]=0
                             q.append([b[0],b[1]+1])
                         if b[0]==0 or b[1]==0 or b[0]==len(g)-1 or b[1]==len(g[0])-1:
-                            t=False 
-                    print(m,t)
+                            t=False
                     if t:
                         c+=m
                     m=0
