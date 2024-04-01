@@ -1,11 +1,8 @@
 class Solution:
     def maximumSwap(self, num: int) -> int:
         s=list(str(num))
-        print(s)
         a=sorted(s)
-        print(a)
         b=a[::-1]
-        print(b)
         c=-1
         d=-1
         for i in range (len(s)):
