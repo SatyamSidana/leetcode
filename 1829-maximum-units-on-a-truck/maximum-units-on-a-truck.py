@@ -8,7 +8,6 @@ class Solution:
         for i in b:
             swap(i)
         b.sort(reverse=True)
-        print(b)
         for i in b:
             if i[1]<t:
                 c+=i[0]*i[1]
