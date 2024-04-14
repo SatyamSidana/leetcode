@@ -13,7 +13,6 @@ class Solution:
                 r=0
             i-=1
             j-=1
-            print(c)
         while i>=0:
             if int(a[i])+r>1:
                 c+=(str(int(a[i])+r-2))
