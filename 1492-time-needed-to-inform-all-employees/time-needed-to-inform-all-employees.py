@@ -9,7 +9,6 @@ class Solution:
         for i in range (len(m)):
             if m[i]!=-1:
                 b[m[i]].append(i)
-        print(b)
         def dfs(r,c):
             c+=t[r]
             for i in b[r]:
@@ -18,5 +17,4 @@ class Solution:
                 d.append(c)
             c-=t[r]
         dfs(h,c)
-        
         return max(d)
