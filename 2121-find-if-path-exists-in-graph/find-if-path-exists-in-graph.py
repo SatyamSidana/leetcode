@@ -9,12 +9,12 @@ class Solution:
             a[i[0]].append(i[1])
             a[i[1]].append(i[0])
         v=[0]*n
+        v[source]=1
         def dfs(s,d):
             for i in a[s]:
                 if not v[i] :
                     v[i]=1
-                    dfs(i,d)
-            print(s)        
+                    dfs(i,d)       
             if s==d:
                 b.append(0)
         dfs(source,destination)
