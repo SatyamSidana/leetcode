@@ -24,9 +24,7 @@ class Solution:
         for u,v in c:
             union(u,v)
         a=0
-        print(p)
         for i in range(n):
             if i==p[i]:
                 a+=1
-        print(a)
         return a-1
