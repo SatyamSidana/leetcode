@@ -1,18 +1,27 @@
 class Solution:
     def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
-        def find(e):
-            if e not in parent:
-                parent[e] = e
-            while e!= parent[e]:
-                e = parent[e]
-            return e #Returning the root value of e
+        p=[]
+        b=""
+        for i in range (26):
+            p.append(i)
+        def find(x):
+            if x==p[x]:
+                return x
+            return find(p[x])
+        def union(x,y):
+            xr=find(x)
+            yr=find(y)
+            if xr>yr:
+                p[xr]=yr
+            else:
+                p[yr]=xr
+            print(x,p[x],y,p[y])
+        for i in range (len(s1)):
+            union(ord(s1[i])-ord("a"),ord(s2[i])-ord("a"))
         
-        def union(a,b):
-            ra,rb=find(a),find(b)# Sending a &b values to fetch root values
-            if ra == rb:
-                return
-            parent[ra] = parent[rb] = min(ra, rb)#assign the MIN value to both roots in dict (parent)
+        print(p)
+        for i in  baseStr:
+            b+=chr(ord("a")+find(ord(i)-ord("a")))
+        return b
+
         
-        parent={} # Created a dict to store the root values
-        for c1,c2 in zip(s1,s2): union(c1,c2) #Sending zipped values to UNION function
-        return ''.join(parent[find(c)] for c in baseStr)
