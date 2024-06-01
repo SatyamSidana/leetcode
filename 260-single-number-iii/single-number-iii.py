@@ -1,13 +1,14 @@
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
-        xor = 0
-        for num in nums:
-            xor ^= num
-        right_bit = xor & -xor
-        n1, n2 = 0, 0
-        for num in nums:
-            if num & right_bit:
-                n1 ^= num
+        b1=0
+        b2=0
+        x=0
+        for i in nums:
+            x=x^i
+        r=x&-x
+        for i in nums:
+            if i& r:
+                b1=b1^i
             else:
-                n2 ^= num
-        return[n1,n2]
+                b2=b2^i
+        return [b1,b2]
