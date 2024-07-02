@@ -1,8 +1,5 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
-        if len(arr)<3:
-            return False
-        
         i=0
         j=1
         k=2
