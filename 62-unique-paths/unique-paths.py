@@ -19,10 +19,8 @@ class Solution:
                 d=dp[x][y+1]
             else:
                 d=calc(x,y+1)
-            print(r,d)
             dp[x][y] = r+d
             return r+d
-            print(dp)
         calc(0,0)
         return dp[0][0]
         
