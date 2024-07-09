@@ -9,5 +9,4 @@ class Solution:
             else:
                 w+=i[1]
                 t=i[0]+i[1]
-            print(w,t)
         return w/len(c)
