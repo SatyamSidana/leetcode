@@ -17,7 +17,4 @@ class Solution:
                 b=f(i,t-c[i])
             dp[i][t]=a+b
             return a+b
-        x=f(0,s)
-        if x==1e9:
-            return -1
-        return x
+        return f(0,s)
