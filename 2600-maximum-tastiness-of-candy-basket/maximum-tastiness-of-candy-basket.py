@@ -19,6 +19,5 @@ class Solution:
                 l=mid+1
             else:
                 h=mid-1
-        print(isvalid(8))
         return ans
         
