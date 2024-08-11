@@ -7,7 +7,7 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        ans=[]
+        ans=[-1]
         def dfs(cur,a,b):
             if cur!=None:
                 t1=0
@@ -25,7 +25,8 @@ class Solution:
                     t1 |=y[0]
                     t2 |=y[1]
                 if t1==1 and t2==1:
-                    ans.append(cur)
+                    if ans[0]==-1:
+                        ans[0]=cur
                 return (t1,t2)
         dfs(root,p.val,q.val)
         return ans[0]
