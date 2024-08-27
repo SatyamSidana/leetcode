@@ -17,7 +17,7 @@ public:
             double prob = pq.top().first;
             pq.pop();
             if (prob < d[node]) continue;
-            for (auto& edge : adj[node]) {
+            for (auto edge : adj[node]) {
                 int neighbor = edge.first;
                 double edgeProb = edge.second;
                 if (prob * edgeProb > d[neighbor]) {
